@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Node Pad</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #1e1e2f;
+      color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #2e2e3f;
+      padding: 20px 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      background: #44445a;
+      color: #fff;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid #00bfff;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    button {
+      flex: 1 1 45%;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #00bfff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #009fdc;
+    }
+
+    .extra-buttons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .extra-buttons button {
+      flex: 1 1 45%;
+      background: #ff4c4c;
+    }
+
+    .extra-buttons button:hover {
+      background: #e04343;
+    }
+
+    .view-btn {
+      background: #00cc66;
+    }
+
+    .view-btn:hover {
+      background: #00b359;
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Node Pad</h1>
+    <input   id="noteTitle"  type="text" placeholder="Note Title" />
+    <textarea    id="node"  rows="10" placeholder="Write your note here..."></textarea>
+
+    <div class="buttons">
+      <button   onclick="save()">Save</button>
+    </div>
+
+
+<div id="viewHistory"></div>
+
+
+    <div class="extra-buttons">
+      <button class="view-btn"  onclick="view()">View History</button>
+    </div>
+  </div>
+
+  
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="mode.js" ></script>
+</body>
+</html>
